@@ -20,3 +20,5 @@ dist/
 
 # Virtual env
 .venv
+
+*.deb
