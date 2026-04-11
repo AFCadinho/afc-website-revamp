@@ -1,11 +1,22 @@
+# Env files
 .env
+.env.*
+*.env
+
+# Python
 __pycache__/
 *.pyc
 instance/
-.env.*
 *.sqlite3
 *.db
+
+# Node
 node_modules/
 dist/
+
+# IDE / OS
 .vscode/
 .DS_Store
+
+# Virtual env
+.venv
