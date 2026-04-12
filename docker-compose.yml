@@ -4,8 +4,8 @@ services:
       context: ./backend
     env_file:
       - backend.env
-    expose:
-      - "5000"
+    ports:
+      - "5000:5000"
 
   app:
     build:
