@@ -1,0 +1,21 @@
+name: Deploy production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger production deploy
+        run: |
+          curl -X POST "${{ secrets.PRODUCTION_DEPLOY_URL }}" \
+            -H "Authorization: Bearer ${{ secrets.PRODUCTION_DEPLOY_SECRET }}"
