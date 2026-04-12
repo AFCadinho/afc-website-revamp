@@ -1,0 +1,21 @@
+name: Deploy staging
+
+on:
+  push:
+    branches:
+      - develop
+  workflow_dispatch:
+
+concurrency:
+  group: staging-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger staging deploy
+        run: |
+          curl -X POST "${{ secrets.STAGING_DEPLOY_URL }}" \
+            -H "Authorization: Bearer ${{ secrets.STAGING_DEPLOY_SECRET }}"
