@@ -5,6 +5,7 @@
   <header>
     <h1>Welcome</h1>
     <nav>
+      <RouterLink to="/">Home</RouterLink>
       <RouterLink :to="{ name: 'login' }">Login</RouterLink>
     </nav>
   </header>
