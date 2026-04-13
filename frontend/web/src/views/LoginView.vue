@@ -72,7 +72,7 @@ const logout = async () => {
 
 <template>
     <div>
-        <h2>Login</h2>
+        <h2>Login Bro</h2>
 
         <form @submit.prevent="login">
             <div>

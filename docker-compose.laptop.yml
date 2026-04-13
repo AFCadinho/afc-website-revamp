@@ -1,0 +1,6 @@
+services:
+  backend:
+    ports:
+      - "5000:5000"
+
+# docker compose -f docker-compose.yml -f docker-compose.laptop.yml up --build
