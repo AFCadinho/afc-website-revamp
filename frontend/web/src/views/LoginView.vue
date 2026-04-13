@@ -82,7 +82,7 @@ const logout = async () => {
 
             <div>
                 <label>Password</label>
-                <input type="password" placeholder="Password" v-model="password">
+                <input type="password" placeholder="Password" v-model="password">   
             </div>
 
             <button type="submit" :disabled="loading">
